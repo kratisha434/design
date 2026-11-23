@@ -1,0 +1,547 @@
+/* REGISTRATION CARD */
+.register-step {
+    width: 100%;
+}
+.register-step.active {
+    display: block;
+}
+/* PROGRESS SECTION */
+.progress-section {
+    margin-top: 0;
+    text-align: center;
+}
+.progress-section p {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+.progress-track {
+    height: 8px;
+    background: #efedf1;
+    border-radius: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.progress-fill {
+    height: 100%;
+    background: var(--maroon);
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+/*WELCOME SECTION */
+.register-welcome {
+    margin-top: 38px;
+    margin-bottom: 28px;
+}
+.register-welcome h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+.register-welcome p {
+    margin-top: 12px;
+    font-size: 15px;
+    color: #77758f;
+    line-height: 1.6;
+}
+/* PROFILE OPTIONS */
+.profile-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 30px;
+}
+.profile-option {
+    min-height: 115px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px 12px;
+    border: 1.5px solid #e8e3eb;
+    border-radius: 17px;
+    background: #ffffff;
+    color: #981641;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.profile-option i {
+    font-size: 29px;
+    width: 29px;
+    height: 29px;
+    color: #981641;
+}
+.profile-option:hover {
+    border-color: #d99ab2;
+    background: #fdf6f9;
+    transform: translateY(-2px);
+}
+.profile-option.selected {
+    border: 2px solid var(--maroon);
+    background: #fcf1f5;
+    color: var(--maroon);
+    box-shadow: 0 4px 12px rgba(152, 22, 65, 0.08);
+}
+.profile-option.selected i {
+    color: var(--maroon);
+}
+/* CUSTOM SVG ICONS */
+.profile-custom-icon {
+    width: 29px;
+    height: 29px;
+    fill: currentColor;
+    color: #801234;
+    flex-shrink: 0;
+}
+.profile-option.selected .profile-custom-icon {
+    color: var(--maroon);
+}
+/* GENDER OPTIONS */
+.gender-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+.gender-option {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 25px 15px;
+    border: 1.5px solid #e8e3eb;
+    border-radius: 20px;
+    background: #ffffff;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.gender-option > i {
+    font-size: 55px;
+    line-height: 1;
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+    color: #801234;
+    opacity: 1;
+}
+.gender-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+.gender-subtitle {
+    font-size: 15px;
+    font-weight: 500;
+    color: #85849e;
+}
+.gender-option:hover {
+    border-color: #d99ab2;
+    background: #fdf6f9;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(152, 22, 65, 0.07);
+}
+.gender-option.selected {
+    border: 2px solid var(--maroon);
+    background: #fcf1f5;
+    box-shadow: 0 5px 15px rgba(152, 22, 65, 0.08);
+}
+.gender-option.selected > i,
+.gender-option.selected .gender-title {
+    color: var(--maroon);
+}
+.gender-option.selected .gender-subtitle {
+    color: #9b536e;
+}
+/* INPUT FIELDS */
+.input-group {
+    margin-top: 22px;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #302c43;
+    font-size: 16px;
+    font-weight: 700;
+}
+.input-group label span {
+    color: var(--maroon);
+}
+/* Input Wrapper */
+.input-wrapper {
+    height: 62px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 0 20px;
+    border: 2px solid #ded9e4;
+    border-radius: 15px;
+    background: white;
+    transition: border 0.2s ease;
+}
+.input-wrapper:focus-within {
+    border-color: var(--maroon);
+}
+.input-wrapper > i,
+.input-wrapper > svg {
+    width: 20px;
+    height: 20px;
+    color: #77758f;
+    flex-shrink: 0;
+}
+.input-wrapper input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--text-dark);
+}
+.input-wrapper input::placeholder {
+    color: #9693a9;
+}
+.country-code {
+    font-size: 16px;
+    font-weight: 700;
+    color: #55536f;
+    border-right: 1px solid #ded9e4;
+    padding-right: 16px;
+    white-space: nowrap;
+}
+.dob-fields {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr;
+    gap: 12px;
+}
+.dob-fields select {
+    width: 100%;
+    height: 62px;
+    padding: 0 13px;
+    border: 2px solid #ded9e4;
+    border-radius: 15px;
+    outline: none;
+    background: #ffffff;
+    color: #55536f;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    transition: border 0.2s ease;
+}
+.dob-fields select:focus {
+    border-color: var(--maroon);
+}
+.dob-hint {
+    display: block;
+    margin-top: 9px;
+    color: #85849e;
+    font-size: 13px;
+}
+/* REGISTER TOGGLE */
+.register-method-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 28px;
+}
+.register-method-heading > span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #514d68;
+}
+.login-toggle {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 5px;
+    background: #f6f5f9;
+    border: 1px solid #e8e5ee;
+    border-radius: 40px;
+}
+.toggle-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 30px;
+    background: transparent;
+    color: #85849e;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.toggle-option i,
+.toggle-option svg {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+}
+.toggle-option.active {
+    background: #ffffff;
+    color: var(--maroon);
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+}
+/* ERROR AND FORM STATUS */
+.error-message {
+    display: block;
+    margin-top: 8px;
+    color: #d32f45;
+    font-size: 13px;
+}
+.form-status {
+    min-height: 20px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--maroon);
+}
+/* NAVIGATION BUTTONS */
+.register-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 30px;
+}
+/* Back Button */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 5px;
+    border: none;
+    background: transparent;
+    color: #77758f;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+.back-link:hover {
+    color: var(--maroon);
+}
+.back-link i {
+    width: 19px;
+    height: 19px;
+}
+.back-link span {
+    color: var(--maroon);
+    font-weight: 700;
+}
+/* Continue Button */
+.continue-button {
+    min-width: 175px;
+    min-height: 62px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 15px;
+    background: var(--maroon);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.continue-button:hover {
+    background: var(--maroon-dark);
+    transform: translateY(-2px);
+}
+.continue-button i {
+    width: 21px;
+    height: 21px;
+}
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+    .progress-section p {
+        font-size: 12px;
+        letter-spacing: 0.7px;
+    }
+    .progress-track {
+        height: 7px;
+        margin-top: 17px;
+    }
+    .register-welcome {
+        margin-top: 32px;
+        margin-bottom: 23px;
+    }
+    .register-welcome h1 {
+        font-size: 30px;
+    }
+    .register-welcome p {
+        font-size: 14px;
+    }
+    .profile-options {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 23px;
+    }
+    .profile-option {
+        min-height: 100px;
+        padding: 14px 8px;
+        font-size: 14px;
+        border-radius: 14px;
+    }
+    .profile-option i,
+    .profile-custom-icon {
+        font-size: 25px;
+        width: 25px;
+        height: 25px;
+    }
+    .gender-options {
+        gap: 12px;
+        margin-top: 25px;
+    }
+    .gender-option {
+        min-height: 155px;
+        padding: 18px 10px;
+        border-radius: 16px;
+    }
+    .gender-option > i {
+        font-size: 44px;
+        width: auto;
+        height: auto;
+    }
+    .gender-title {
+        font-size: 21px;
+    }
+    .gender-subtitle {
+        font-size: 13px;
+    }
+    .input-group {
+        margin-top: 20px;
+    }
+    .input-group label {
+        font-size: 14px;
+        margin-bottom: 9px;
+    }
+    .input-wrapper {
+        height: 56px;
+        padding: 0 13px;
+        gap: 10px;
+        border-radius: 12px;
+    }
+    .input-wrapper input {
+        font-size: 14px;
+    }
+    .input-wrapper > i,
+    .input-wrapper > svg {
+        width: 19px;
+        height: 19px;
+    }
+    .country-code {
+        font-size: 14px;
+        padding-right: 10px;
+    }
+    .dob-fields {
+        gap: 8px;
+    }
+    .dob-fields select {
+        height: 55px;
+        padding: 0 8px;
+        font-size: 13px;
+        border-radius: 12px;
+    }
+    .dob-hint {
+        font-size: 12px;
+    }
+    .register-method-heading {
+        gap: 8px;
+        margin-top: 24px;
+    }
+    .register-method-heading > span {
+        font-size: 14px;
+    }
+    .login-toggle {
+        gap: 3px;
+        padding: 4px;
+    }
+    .toggle-option {
+        min-height: 38px;
+        padding: 8px 11px;
+        font-size: 13px;
+        gap: 6px;
+    }
+    .toggle-option i,
+    .toggle-option svg {
+        width: 16px;
+        height: 16px;
+    }
+    .register-navigation {
+        gap: 8px;
+        margin-top: 25px;
+    }
+    .back-link {
+        font-size: 13px;
+        gap: 5px;
+    }
+    .back-link i {
+        width: 17px;
+        height: 17px;
+    }
+    .continue-button {
+        min-width: 135px;
+        min-height: 55px;
+        padding: 12px 15px;
+        font-size: 14px;
+        gap: 8px;
+        border-radius: 12px;
+    }
+    .continue-button i {
+        width: 18px;
+        height: 18px;
+    }
+}
+/* EXTRA SMALL MOBILE */
+@media (max-width: 380px) {
+    .register-welcome h1 {
+        font-size: 27px;
+    }
+    .profile-options {
+        gap: 9px;
+    }
+    .profile-option {
+        min-height: 90px;
+    }
+    .gender-option {
+        min-height: 140px;
+    }
+    .register-method-heading > span {
+        font-size: 13px;
+    }
+    .toggle-option {
+        padding: 7px 8px;
+        font-size: 11px;
+    }
+    .continue-button {
+        min-width: 125px;
+        padding: 11px 12px;
+        font-size: 13px;
+    }
+    .back-link {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | MatchVeda</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand">
+                <div class="brand-icon">MV</div>
+                <span class="brand-name"><span>Match</span>Veda</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#"><i data-lucide="users"></i>Browse</a>
+                <a href="#"><i data-lucide="file-text"></i>Biodata</a>
+                <a href="#"><i data-lucide="grid-2x2"></i>Communities</a>
+                <a href="#"><i data-lucide="map-pin"></i>Cities</a>
+                <a href="#"><i data-lucide="info"></i>About</a>
+                <a href="#"><i data-lucide="circle-help"></i>Help</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="login-nav">Login</button>
+                <button class="register-nav" onclick="window.location.href='register.html'">
+    Register
+</button>
+            </div>
+        </div>
+    </header>
+    <!-- Login Section -->
+    <main class="login-page">
+        <!-- Decorative Background -->
+        <div class="background-decoration">
+            <svg class="connection-art" viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                    <linearGradient id="lineGradient">
+                        <stop offset="0%" stop-color="#E9AFC1"/>
+                        <stop offset="50%" stop-color="#C96B8A"/>
+                        <stop offset="100%" stop-color="#E9AFC1"/>
+                    </linearGradient>
+                </defs>
+                <!-- Connecting string -->
+                <path d="M 210 370 C 330 310, 405 470, 530 410 C 600 375, 630 300, 675 285" class="connection-line"/>
+                <path d="M 765 285 C 815 300, 840 375, 910 410 C 1035 470, 1110 310, 1230 370" class="connection-line"/>
+                <!-- Small connection dots -->
+                <circle cx="530" cy="410" r="5" class="connection-dot"/>
+                <circle cx="910" cy="410" r="5" class="connection-dot"/>
+                <circle cx="720" cy="325" r="4" class="connection-dot"/>
+                <!-- Left Phone -->
+                <g transform="translate(125 300) rotate(-8 75 130)">
+                    <rect x="5" y="0" width="145" height="260" rx="28" class="phone-body"/>
+                    <rect x="19" y="28" width="117" height="205" rx="17" class="phone-screen"/>
+                    <rect x="58" y="12" width="38" height="5" rx="3" class="phone-speaker"/>
+                    <circle cx="77" cy="92" r="30" class="profile-head"/>
+                    <path d="M47 91 Q77 55 107 91 Q107 116 77 121 Q47 116 47 91Z" class="profile-hair"/>
+                    <path d="M38 198 Q39 143 77 143 Q115 143 116 198Z" class="profile-body-shape"/>
+                    <circle cx="77" cy="245" r="4" class="phone-camera"/>
+                </g>
+                <!-- Right Phone -->
+                <g transform="translate(1170 300) rotate(8 75 130)">
+                    <rect x="5" y="0" width="145" height="260" rx="28" class="phone-body"/>
+                    <rect x="19" y="28" width="117" height="205" rx="17" class="phone-screen"/>
+                    <rect x="58" y="12" width="38" height="5" rx="3" class="phone-speaker"/>
+                    <circle cx="77" cy="92" r="30" class="profile-head"/>
+                    <path d="M47 91 Q77 55 107 91 Q107 116 77 121 Q47 116 47 91Z" class="profile-hair"/>
+                    <path d="M38 198 Q39 143 77 143 Q115 143 116 198Z" class="profile-body-shape"/>
+                    <circle cx="77" cy="245" r="4" class="phone-camera"/>
+                </g>
+            </svg>
+        </div>
+        <!-- Centered Login Card -->
+        <section class="login-card">
+            <!-- Progress -->
+            <div class="progress-section">
+                <p id="step-text">STEP 1 OF 2 • EMAIL SIGN-IN</p>
+                <div class="progress-track"><div class="progress-fill"></div></div>
+            </div>
+            <!-- Welcome -->
+            <div class="welcome-section">
+                <h1>Welcome back <i data-lucide="info" class="info-icon"></i></h1>
+                <p>Sign in to continue your life partner search.</p>
+            </div>
+            <!-- Login Toggle -->
+            <div class="login-method-row">
+    <span class="login-method-label">Sign in with</span>
+    <div class="login-toggle" role="group" aria-label="Choose sign-in method">
+        <button type="button" class="toggle-option active"
+            id="email-tab" data-mode="email" aria-pressed="true">
+            <i data-lucide="mail"></i>
+            Email
+        </button>
+        <button type="button" class="toggle-option"
+            id="phone-tab" data-mode="phone" aria-pressed="false">
+            <i data-lucide="phone"></i>
+            Phone
+        </button>
+    </div>
+</div>
+            <!-- Login Form -->
+            <form id="login-form" novalidate>
+                <div class="input-group" id="email-group">
+                    <label for="email">Email address <span>*</span></label>
+                    <div class="input-wrapper">
+                        <i data-lucide="mail"></i>
+                        <input type="email" id="email" placeholder="name@example.com" autocomplete="email">
+                    </div>
+                    <small class="error-message" id="email-error"></small>
+                </div>
+                <div class="input-group hidden" id="phone-group">
+                    <label for="phone">Phone number <span>*</span></label>
+                    <div class="input-wrapper phone-wrapper">
+                        <span class="country-code">+91</span>
+                        <input type="tel" id="phone" placeholder="Enter your 10-digit mobile number" maxlength="10" inputmode="numeric" autocomplete="tel-national">
+                    </div>
+                    <small class="error-message" id="phone-error"></small>
+                </div>
+                <button type="submit" class="continue-button" id="continue-button">
+                    <span id="button-text">Continue with email</span>
+                    <i data-lucide="arrow-right"></i>
+                </button>
+                <p class="form-status" id="form-status" aria-live="polite"></p>
+            </form>
+            <!-- Footer -->
+            <div class="card-footer">
+                <p>New to MatchVeda? <a href="register.html">Create free profile</a></p>
+            </div>
+        </section>
+        <!-- SECOND SCREEN: OTP VERIFICATION -->
+        <section class="otp-card hidden" id="otp-screen">
+            <!-- Progress -->
+            <div class="progress-section">
+                <p>STEP 2 OF 2 • OTP VERIFICATION</p>
+                <div class="progress-track"><div class="progress-fill otp-progress"></div></div>
+            </div>
+            <!-- Welcome -->
+            <div class="otp-welcome">
+                <h1>Verify your account <i data-lucide="info" class="info-icon"></i></h1>
+                <p id="otp-description">We've sent a 6-digit verification code to your email address.</p>
+            </div>
+            <!-- Sent To -->
+            <div class="otp-sent-info">
+                <i data-lucide="mail" id="otp-method-icon"></i>
+                <span id="otp-destination">name@example.com</span>
+                <button type="button" id="change-contact">Change</button>
+            </div>
+            <!-- OTP Input -->
+            <form id="otp-form" novalidate>
+                <div class="input-group">
+                    <label for="otp-input">Enter verification code <span>*</span></label>
+                    <input type="text" id="otp-input" class="otp-input" placeholder="000000" maxlength="6" inputmode="numeric" autocomplete="one-time-code" required>
+                    <small class="error-message" id="otp-error"></small>
+                </div>
+                <button type="submit" class="continue-button">
+                    <span>Verify &amp; Continue</span>
+                    <i data-lucide="arrow-right"></i>
+                </button>
+                <p class="form-status" id="otp-status" aria-live="polite"></p>
+            </form>
+            <!-- Resend OTP -->
+            <div class="resend-section">
+                <span>Didn't receive the code?</span>
+                <button type="button" id="resend-otp" disabled>Resend OTP <span id="resend-timer">(30s)</span></button>
+            </div>
+            <!-- Alternative Login Help -->
+            <div class="alternative-login">
+                <i data-lucide="circle-help"></i>
+                <span>Facing issues?</span>
+                <button type="button" id="otp-alternative-button">Try using your phone number</button>
+            </div>
+            <!-- Back Option -->
+            <div class="alternative-login">
+                <i data-lucide="arrow-left"></i>
+                <button type="button" id="back-to-login">Back to sign in</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
