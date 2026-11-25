@@ -25,7 +25,8 @@ const otpError = document.getElementById("otp-error");
 const otpStatus = document.getElementById("otp-status");
 const resendButton = document.getElementById("resend-otp");
 const resendTimer = document.getElementById("resend-timer");
-const otpAlternativeButton = document.getElementById("otp-alternative-button");
+const otpAlternativeButton =
+    document.getElementById("otp-alternative-button");
 // SWITCH LOGIN METHOD
 function switchMode(mode) {
     currentMode = mode;
@@ -49,11 +50,37 @@ function switchMode(mode) {
 // TOGGLE BUTTONS
 emailTab.addEventListener("click", () => switchMode("email"));
 phoneTab.addEventListener("click", () => switchMode("phone"));
-// PHONE INPUT - NUMBERS ONLY
-phoneInput.addEventListener("input", () => {
-    phoneInput.value = phoneInput.value.replace(/\D/g, "");
+phoneInput.addEventListener("input", function () {
+    this.value = this.value.replace(/\D/g, "").slice(0, 10);
+    phoneError.textContent = "";
 });
-// SHOW SECOND SCREEN
+function validatePhoneNumber(phone) {
+    if (!phone) {
+        phoneError.textContent =
+            "Please enter your phone number.";
+        return false;
+    }
+    if (/^[0-5]/.test(phone)) {
+        phoneError.textContent =
+            "Phone number must start with a digit between 6 and 9.";
+        return false;
+    }
+    if (phone.length < 10) {
+        phoneError.textContent =
+            "Please enter all 10 digits of your phone number.";
+
+        return false;
+    }
+    if (!/^[6-9]\d{9}$/.test(phone)) {
+        phoneError.textContent =
+            "Please enter a valid 10-digit phone number.";
+
+        return false;
+    }
+    phoneError.textContent = "";
+    return true;
+}
+// SECOND SCREEN
 function showOtpScreen(method, contact) {
     loginMethod = method;
     enteredContact = contact;
@@ -63,12 +90,14 @@ function showOtpScreen(method, contact) {
         otpMethodIcon.setAttribute("data-lucide", "mail");
         otpDescription.textContent =
             "We've sent a 6-digit verification code to your email address.";
-        otpAlternativeButton.textContent = "Try using your phone number";
+        otpAlternativeButton.textContent =
+            "Try using your phone number";
     } else {
         otpMethodIcon.setAttribute("data-lucide", "smartphone");
         otpDescription.textContent =
             "We've sent a 6-digit verification code to your phone number.";
-        otpAlternativeButton.textContent = "Try using your email";
+        otpAlternativeButton.textContent =
+            "Try using your email";
     }
     otpDestination.textContent = contact;
     otpInput.value = "";
@@ -88,23 +117,20 @@ loginForm.addEventListener("submit", (event) => {
         const email = emailInput.value.trim();
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email) {
-            emailError.textContent = "Please enter your email address.";
+            emailError.textContent =
+                "Please enter your email address.";
             return;
         }
         if (!emailPattern.test(email)) {
-            emailError.textContent = "Please enter a valid email address.";
+            emailError.textContent =
+                "Please enter a valid email address.";
             return;
         }
         showOtpScreen("email", email);
-    } else {
+    }
+    else {
         const phone = phoneInput.value.trim();
-        const phonePattern = /^[6-9]\d{9}$/;
-        if (!phone) {
-            phoneError.textContent = "Please enter your phone number.";
-            return;
-        }
-        if (!phonePattern.test(phone)) {
-            phoneError.textContent = "Please enter a valid 10-digit phone number.";
+        if (!validatePhoneNumber(phone)) {
             return;
         }
         showOtpScreen("phone", "+91 " + phone);
@@ -126,7 +152,6 @@ function startResendTimer() {
         }
     }, 1000);
 }
-// OTP INPUT - NUMBERS ONLY
 otpInput.addEventListener("input", function () {
     this.value = this.value.replace(/\D/g, "").slice(0, 6);
 });
@@ -144,9 +169,11 @@ function returnToLogin() {
     otpStatus.textContent = "";
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
-document.getElementById("change-contact").addEventListener("click", returnToLogin);
-document.getElementById("back-to-login").addEventListener("click", returnToLogin);
-// ALTERNATIVE LOGIN HELP - NOW ON OTP SCREEN
+document.getElementById("change-contact")
+    .addEventListener("click", returnToLogin);
+document.getElementById("back-to-login")
+    .addEventListener("click", returnToLogin);
+// ALTERNATIVE LOGIN HELP
 otpAlternativeButton.addEventListener("click", () => {
     const nextMode = loginMethod === "email" ? "phone" : "email";
     returnToLogin();
@@ -159,7 +186,8 @@ document.getElementById("otp-form").addEventListener("submit", (event) => {
     otpError.textContent = "";
     otpStatus.textContent = "";
     if (!/^\d{6}$/.test(otp)) {
-        otpError.textContent = "Please enter a valid 6-digit OTP.";
+        otpError.textContent =
+            "Please enter a valid 6-digit OTP.";
         return;
     }
     otpStatus.textContent = "Frontend preview only.";

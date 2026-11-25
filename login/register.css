@@ -545,3 +545,657 @@
         font-size: 12px;
     }
 }
+/* DESKTOP & TABLET - REGISTER LAYOUT */
+@media (min-width: 601px) {
+    .register-card {
+        padding: 26px 38px 24px;
+    }
+    .register-welcome {
+        margin-top: 22px;
+        margin-bottom: 20px;
+    }
+    .register-welcome h1 {
+        font-size: 29px;
+    }
+    .register-welcome p {
+        margin-top: 8px;
+        font-size: 14px;
+    }
+    .profile-options {
+        gap: 13px;
+        margin-top: 22px;
+    }
+    .profile-option {
+        min-height: 96px;
+        padding: 13px 10px;
+        gap: 9px;
+    }
+    .gender-options {
+        gap: 17px;
+        margin-top: 25px;
+    }
+    .gender-option {
+        min-height: 175px;
+        padding: 18px 12px;
+    }
+    .gender-option > i {
+        font-size: 47px;
+        margin-bottom: 6px;
+    }
+    .gender-title {
+        font-size: 23px;
+    }
+    .input-group {
+        margin-top: 16px;
+    }
+    .input-group label {
+        margin-bottom: 7px;
+        font-size: 15px;
+    }
+    .input-wrapper {
+        height: 53px;
+        padding: 0 16px;
+        gap: 12px;
+        border-radius: 13px;
+    }
+    .input-wrapper input {
+        font-size: 15px;
+    }
+    .input-wrapper > i,
+    .input-wrapper > svg {
+        width: 20px;
+        height: 20px;
+    }
+    .country-code {
+        font-size: 15px;
+        padding-right: 12px;
+    }
+    .dob-fields {
+        gap: 10px;
+    }
+    .dob-fields select {
+        height: 53px;
+        font-size: 14px;
+        border-radius: 13px;
+    }
+    .dob-hint {
+        margin-top: 6px;
+        font-size: 12px;
+    }
+    .register-method-heading {
+        margin-top: 19px;
+    }
+    .toggle-option {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    .register-navigation {
+        margin-top: 21px;
+    }
+    .continue-button {
+        min-height: 54px;
+        padding: 11px 21px;
+        font-size: 15px;
+    }
+    #register-step-3 .step-back-top {
+        margin-bottom: 8px;
+    }
+    #register-step-3 .progress-track {
+        height: 6px;
+        margin-top: 10px;
+    }
+    #register-step-3 .progress-section p {
+        font-size: 14px;
+    }
+    #register-step-3 .register-welcome {
+        margin-top: 13px;
+        margin-bottom: 12px;
+    }
+    #register-step-3 .register-welcome h1 {
+        font-size: 26px;
+    }
+    #register-step-3 .register-welcome p {
+        margin-top: 5px;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    #register-step-3 .name-fields {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        align-items: start;
+    }
+    #register-step-3 .name-fields .input-group {
+        margin-top: 0;
+        min-width: 0;
+    }
+    #register-step-3 .input-group {
+        margin-top: 11px;
+        min-width: 0;
+    }
+    #register-step-3 .input-group label {
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+    #register-step-3 .input-wrapper {
+        height: 46px;
+        padding: 0 13px;
+        gap: 10px;
+        border-radius: 11px;
+    }
+    #register-step-3 .input-wrapper input {
+        font-size: 14px;
+    }
+    #register-step-3 .input-wrapper > i,
+    #register-step-3 .input-wrapper > svg {
+        width: 17px;
+        height: 17px;
+    }
+    #register-step-3 .dob-fields {
+        gap: 8px;
+    }
+    #register-step-3 .dob-fields select {
+        height: 46px;
+        padding: 0 10px;
+        font-size: 13px;
+        border-radius: 11px;
+    }
+    #register-step-3 .dob-hint {
+        margin-top: 4px;
+        font-size: 11px;
+    }
+    #register-step-3 .register-method-heading {
+        margin-top: 13px;
+        gap: 10px;
+    }
+    #register-step-3 .register-method-heading > span {
+        font-size: 14px;
+    }
+    #register-step-3 .login-toggle {
+        padding: 3px;
+    }
+    #register-step-3 .toggle-option {
+        padding: 7px 11px;
+        font-size: 12px;
+    }
+    #register-step-3 .form-status {
+        min-height: 15px;
+        margin-top: 5px;
+        font-size: 12px;
+    }
+    #register-step-3 .error-message {
+        margin-top: 4px;
+        font-size: 11px;
+    }
+    #register-step-3 #register-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #register-step-3 #register-form > .continue-button {
+        align-self: flex-end;
+        margin: 13px 0 0 auto;
+        min-height: 46px;
+        min-width: 155px;
+        padding: 10px 17px;
+        font-size: 14px;
+        border-radius: 11px;
+    }
+}
+/*TABLET COMPACT SPACING */
+@media (min-width: 601px) and (max-width: 900px) {
+    .register-card {
+        padding: 23px 29px 21px;
+    }
+    .register-welcome {
+        margin-top: 19px;
+        margin-bottom: 17px;
+    }
+    .register-welcome h1 {
+        font-size: 27px;
+    }
+    .profile-option {
+        min-height: 88px;
+    }
+    .gender-option {
+        min-height: 155px;
+    }
+    .input-wrapper,
+    .dob-fields select {
+        height: 51px;
+    }
+    .register-navigation {
+        margin-top: 17px;
+    }
+}
+/*  TOP BACK BUTTON */
+.step-back-top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+.step-back-top .back-link {
+    padding: 5px 0;
+    font-size: 14px;
+}
+.step-back-top .back-link i,
+.step-back-top .back-link svg {
+    width: 18px;
+    height: 18px;
+}
+.step-back-top + .progress-section {
+    margin-top: 0;
+}
+/* MOBILE REGISTER LAYOUT */
+@media (max-width: 600px) {
+    .input-wrapper {
+        height: 53px;
+    }
+    .dob-fields select {
+        height: 52px;
+    }
+    .register-navigation {
+        margin-top: 21px;
+    }
+    #register-step-3 .name-fields {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    #register-step-3 .input-wrapper {
+        height: 53px;
+    }
+    #register-step-3 .dob-fields select {
+        height: 52px;
+    }
+    #register-step-3 .input-group {
+        margin-top: 19px;
+    }
+    .step-back-top {
+        margin-bottom: 12px;
+    }
+    .step-back-top .back-link {
+        font-size: 13px;
+    }
+    #register-step-3 #register-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #register-step-3 #register-form > .continue-button {
+        align-self: flex-end;
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+.gender-options {
+    gap: 12px;
+    margin-top: 20px;
+}
+.gender-option {
+    min-height: 125px;
+    padding: 14px 10px;
+    gap: 7px;
+    border-radius: 16px;
+}
+.gender-option > i {
+    font-size: 36px;
+    margin-bottom: 3px;
+}
+.gender-title {
+    font-size: 21px;
+}
+.gender-subtitle {
+    font-size: 13px;
+}
+@media (max-width: 600px) {
+    .gender-options {
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .gender-option {
+        min-height: 120px;
+        padding: 12px 8px;
+    }
+    .gender-option > i {
+        font-size: 34px;
+    }
+    .gender-title {
+        font-size: 19px;
+    }
+    .gender-subtitle {
+        font-size: 12px;
+    }
+}
+@media (max-width: 600px) {
+    .register-method-heading .login-toggle {
+        flex: 1;
+        min-width: 0;
+    }
+    .register-method-heading .toggle-option {
+        flex: 1;
+        min-width: 0;
+        padding: 8px 7px;
+        gap: 5px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+    .register-method-heading .toggle-option svg,
+    .register-method-heading .toggle-option i {
+        width: 15px;
+        height: 15px;
+        flex-shrink: 0;
+    }
+}
+/* DOB LABEL */
+.dob-label {
+    display: flex !important;
+    align-items: center;
+    width: 100% !important;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.dob-label span {
+    color: var(--maroon);
+}
+.dob-calendar-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto !important;
+    flex-shrink: 0;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    color: var(--maroon);
+    cursor: pointer;
+}
+.dob-calendar-button svg {
+    width: 20px;
+    height: 20px;
+}
+.dob-calendar-button:hover {
+    color: var(--maroon-dark);
+}
+.dob-calendar-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+/* DOB manual fields */
+.dob-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.4fr;
+    gap: 10px;
+}
+.dob-fields input {
+    width: 100%;
+    min-width: 0;
+    height: 53px;
+    padding: 0 10px;
+    border: 2px solid #ded9e4;
+    border-radius: 13px;
+    outline: none;
+    background: #fff;
+    color: var(--text-dark);
+    font-family: inherit;
+    font-size: 15px;
+    text-align: center;
+}
+.dob-fields input:focus {
+    border-color: var(--maroon);
+}
+.dob-fields input::placeholder {
+    color: #9693a9;
+}
+/*  CALENDAR MODAL */
+.dob-calendar-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(35, 20, 30, 0.42);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 9998;
+}
+.flatpickr-calendar.open {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translate(-50%, -50%) !important;
+    width: min(340px, calc(100vw - 24px)) !important;
+    max-width: calc(100vw - 24px);
+    margin: 0 !important;
+    padding: 8px;
+    z-index: 9999 !important;
+    border-radius: 18px;
+    box-shadow: 0 15px 55px rgba(40, 20, 35, 0.2);
+    overflow: visible !important;
+}
+.flatpickr-calendar,
+.flatpickr-calendar * {
+    box-sizing: border-box;
+}
+.flatpickr-calendar .flatpickr-innerContainer,
+.flatpickr-calendar .flatpickr-rContainer,
+.flatpickr-calendar .flatpickr-days,
+.flatpickr-calendar .dayContainer {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+/*CUSTOM TOOLBAR */
+.mv-picker-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 100px;
+    gap: 10px;
+    padding: 12px 8px;
+}
+.mv-picker-select {
+    min-width: 0;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #eadce2;
+    border-radius: 9px;
+    background: #fff;
+    color: #7d3048;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.mv-picker-select:hover {
+    background: #faf3f6;
+    border-color: #7d3048;
+}
+/* CUSTOM PANELS */
+.mv-picker-panel {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 8px;
+    right: 8px;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #eee2e8;
+    border-radius: 13px;
+    box-shadow: 0 10px 35px rgba(50, 25, 40, 0.18);
+    z-index: 10;
+}
+.mv-picker-panel.visible {
+    display: block;
+}
+.mv-picker-panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: #7d3048;
+    font-size: 14px;
+    font-weight: 700;
+}
+.mv-picker-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background: #f7edf1;
+    color: #7d3048;
+    font-size: 21px;
+    line-height: 1;
+    cursor: pointer;
+}
+.mv-picker-close:hover {
+    background: #f0dce4;
+}
+/* Month selector */
+.mv-month-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+}
+/* Year selector */
+.mv-year-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+    max-height: 190px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #c99baa #f8f1f4;
+}
+/* Selector options */
+.mv-picker-option {
+    min-width: 0;
+    min-height: 37px;
+    padding: 6px 4px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: #faf6f8;
+    color: #51414a;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.mv-picker-option:hover:not(:disabled) {
+    background: #f2e3e9;
+    color: #7d3048;
+}
+.mv-picker-option.selected {
+    background: #7d3048;
+    border-color: #7d3048;
+    color: #fff;
+}
+.mv-picker-option:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    background: #f5f3f4;
+}
+.mv-picker-option:focus-visible,
+.mv-picker-select:focus-visible,
+.mv-picker-close:focus-visible {
+    outline: 2px solid #7d3048;
+    outline-offset: 2px;
+}
+/* CALENDAR DAYS */
+.flatpickr-day {
+    max-width: none !important;
+    height: 38px;
+    line-height: 38px;
+
+    border-radius: 9px;
+}
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+    background: #7d3048 !important;
+    border-color: #7d3048 !important;
+    color: #fff !important;
+}
+.flatpickr-day.today {
+    border-color: #7d3048;
+}
+.flatpickr-day:hover:not(.selected):not(.disabled) {
+    background: #f5e9ee;
+    border-color: #f5e9ee;
+}
+/* TABLETS AND SMALLER PHONES */
+@media (max-width: 600px) {
+    .dob-fields {
+        gap: 8px;
+    }
+    .dob-fields input {
+        height: 52px;
+        padding: 0 7px;
+        font-size: 14px;
+    }
+    .dob-calendar-button svg {
+        width: 18px;
+        height: 18px;
+    }
+    .flatpickr-calendar.open {
+        width: min(340px, calc(100vw - 24px)) !important;
+        max-width: calc(100vw - 24px);
+    }
+    .flatpickr-day {
+        height: 36px;
+        line-height: 36px;
+        font-size: 13px;
+    }
+    .mv-picker-toolbar {
+        grid-template-columns: minmax(0, 1fr) 90px;
+        gap: 8px;
+        padding: 10px 5px;
+    }
+    .mv-picker-select {
+        height: 38px;
+        font-size: 13px;
+    }
+    .mv-picker-panel {
+        top: 60px;
+        left: 5px;
+        right: 5px;
+    }
+}
+/* IPHONE SE / NARROW SCREENS */
+@media (max-width: 360px) {
+    .flatpickr-calendar.open {
+        width: calc(100vw - 16px) !important;
+        max-width: calc(100vw - 16px);
+    }
+    .flatpickr-calendar {
+        padding: 5px;
+    }
+    .flatpickr-day {
+        height: 33px;
+        line-height: 33px;
+        font-size: 12px;
+    }
+    .flatpickr-weekday {
+        font-size: 10px;
+    }
+    .mv-picker-toolbar {
+        grid-template-columns: minmax(0, 1fr) 82px;
+        gap: 6px;
+    }
+    .mv-picker-option {
+        min-height: 34px;
+        font-size: 12px;
+    }
+    .mv-year-list {
+        max-height: 175px;
+    }
+}
+body.dob-calendar-active {
+    overflow: hidden;
+}
