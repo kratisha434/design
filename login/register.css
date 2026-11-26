@@ -42,7 +42,7 @@
 }
 .register-welcome p {
     margin-top: 12px;
-    font-size: 15px;
+    font-size: 17px;
     color: #77758f;
     line-height: 1.6;
 }
@@ -1198,4 +1198,35 @@
 }
 body.dob-calendar-active {
     overflow: hidden;
+}
+.register-navigation {
+    margin-top: 28px;
+    text-align: center;
+}
+.register-navigation .back-link {
+    color: #77758f;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.register-navigation .back-link span {
+    color: var(--maroon);
+    font-weight: 700;
+    margin-left: 3px;
+}
+.register-navigation .back-link:hover span {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.profile-custom-icon {
+    width: 30px;
+    height: 30px;
+    color: var(--maroon);
+    flex-shrink: 0;
+    display: block;
+}
+.sister-custom-icon,
+.daughter-custom-icon {
+    overflow: visible;
 }

@@ -364,7 +364,8 @@ body {
     }
     .login-page {
         min-height: calc(100vh - 125px);
-        padding: 35px 14px;
+        padding: 14px 14px 30px;
+        align-items: flex-start;
     }
     .login-card,
     .register-card {
@@ -425,5 +426,11 @@ body {
     .register-card {
         max-height: none;
         overflow: visible;
+    }
+}
+@media (min-width: 381px) and (max-width: 600px) {
+    .login-page:has(.register-card) {
+        align-items: flex-start;
+        padding: 14px 14px 30px;
     }
 }
